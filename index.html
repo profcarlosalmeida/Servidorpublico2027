@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matriz Estratégica de Risco Funcional • Setor Público</title>
+  <title>Painel Comparativo de Risco e Preservação • Funcionalismo Público</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -19,10 +19,10 @@
       <div>
         <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mb-1">
           <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
-          Matriz Multicritério de Risco Institucional
+          Matriz Estratégica Bipolar &middot; Eixo Central Neutro
         </div>
-        <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight text-white">Severidade e Vulnerabilidade no Serviço Público</h1>
-        <p class="text-xs sm:text-sm text-slate-400">Comparativo Técnico Balanceado: Risco Regulatório/Normativo vs. Risco Fiscal/Operacional</p>
+        <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight text-white">Impacto Institucional no Serviço Público</h1>
+        <p class="text-xs sm:text-sm text-slate-400">Comparativo Dinâmico: Mudança com Supermaioria vs. Reeleição com Recessão e Congresso Opositor</p>
       </div>
 
       <div class="flex items-center gap-2 text-xs">
@@ -36,20 +36,20 @@
 
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full flex-1 flex flex-col gap-6">
 
-    <!-- Seletor de Setores -->
+    <!-- Navegador de Áreas (Com botão GERAL em destaque junto com as áreas específicas) -->
     <section class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 sm:p-5 shadow-xl">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-slate-800 mb-3 gap-2">
-        <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Navegação Setorial</span>
-        <span id="activeSectorBadge" class="text-xs text-slate-400">Setor selecionado</span>
+        <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Selecione o Setor ou Visão Geral</span>
+        <span id="activeSectorBadge" class="text-xs text-slate-400">Setor ativo</span>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2" id="sector-nav">
-        <!-- Injetado via JS -->
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-2" id="sector-nav">
+        <!-- Injetado dinamicamente via JS -->
       </div>
     </section>
 
-    <!-- Resumo dos Cenários & Placar de Média Geral -->
+    <!-- Resumo dos Cenários e Média Geral Bipolar -->
     <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <!-- Card Cenário Mudança -->
+      <!-- Cenário Mudança -->
       <div class="p-4 rounded-xl bg-slate-900/90 border border-emerald-500/40 flex flex-col justify-between shadow-lg">
         <div>
           <div class="flex items-center justify-between mb-1.5">
@@ -59,16 +59,16 @@
             </span>
             <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">Supermaioria</span>
           </div>
-          <h3 class="text-sm font-bold text-white">Pressão Regulatória & Estrutural</h3>
-          <p class="text-xs text-slate-400 mt-1">Ataque ativo a normas: PEC 32, flexibilização de estabilidade, metas punitivas, elevação de horas e terceirização.</p>
+          <h3 class="text-sm font-bold text-white">Reforma Normativa Ativa</h3>
+          <p class="text-xs text-slate-400 mt-1">Ataque ativo a normas: PEC 32, metas externas punitivas, sobrecarga de horas e terceirizações amplas.</p>
         </div>
         <div class="mt-4 pt-3 border-t border-slate-800 flex items-baseline justify-between">
-          <span class="text-xs text-slate-400">Índice Médio de Risco:</span>
-          <span id="avgScoreMudanca" class="text-xl font-extrabold text-emerald-400">0.0 / 5.0</span>
+          <span class="text-xs text-slate-400">Média no Eixo (-5 a +5):</span>
+          <span id="avgScoreMudanca" class="text-xl font-extrabold text-emerald-400">0.0</span>
         </div>
       </div>
 
-      <!-- Card Cenário Reeleição -->
+      <!-- Cenário Reeleição -->
       <div class="p-4 rounded-xl bg-slate-900/90 border border-rose-500/40 flex flex-col justify-between shadow-lg">
         <div>
           <div class="flex items-center justify-between mb-1.5">
@@ -78,37 +78,37 @@
             </span>
             <span class="text-[10px] px-1.5 py-0.5 rounded bg-rose-950 text-rose-300 border border-rose-800">Recessão + Oposição</span>
           </div>
-          <h3 class="text-sm font-bold text-white">Pressão Fiscal & Operacional</h3>
-          <p class="text-xs text-slate-400 mt-1">Carreira juridicamente blindada por veto, mas asfixiada por arrocho inflacionário, custeio zero e falta de insumos.</p>
+          <h3 class="text-sm font-bold text-white">Blindagem Legal & Arrocho Fiscal</h3>
+          <p class="text-xs text-slate-400 mt-1">Carreira juridicamente blindada por veto, mas sob arrocho salarial inflacionário e contingenciamento severo de custeio.</p>
         </div>
         <div class="mt-4 pt-3 border-t border-slate-800 flex items-baseline justify-between">
-          <span class="text-xs text-slate-400">Índice Médio de Risco:</span>
-          <span id="avgScoreReeleicao" class="text-xl font-extrabold text-rose-400">0.0 / 5.0</span>
+          <span class="text-xs text-slate-400">Média no Eixo (-5 a +5):</span>
+          <span id="avgScoreReeleicao" class="text-xl font-extrabold text-rose-400">0.0</span>
         </div>
       </div>
 
-      <!-- Diagnóstico Comparativo -->
+      <!-- Diagnóstico da Média Geral -->
       <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 flex flex-col justify-between shadow-lg">
         <div>
           <div class="flex items-center justify-between mb-1.5">
-            <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">Diagnóstico Setorial</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">Balanço do Setor</span>
             <span id="riskBalancePill" class="text-[10px] px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">Equilibrado</span>
           </div>
-          <h3 class="text-sm font-bold text-white" id="balanceHeading">Vulnerabilidade Cruzada</h3>
-          <p class="text-xs text-slate-400 mt-1" id="balanceSummary">Carregando análise...</p>
+          <h3 class="text-sm font-bold text-white" id="balanceHeading">Vulnerabilidade Comparada</h3>
+          <p class="text-xs text-slate-400 mt-1" id="balanceSummary">Carregando balanço do setor...</p>
         </div>
         <div class="mt-4 pt-3 border-t border-slate-800 text-right">
-          <span class="text-[11px] text-slate-500">Escala de Severidade Absoluta: 0 (Mínimo) a 5 (Crítico)</span>
+          <span class="text-[11px] text-slate-500">Linha central (0): divisor entre Risco e Preservação</span>
         </div>
       </div>
     </section>
 
-    <!-- Gráfico Comparativo de Severidade -->
+    <!-- Gráfico Bipolar Centralizado (Bom vs. Ruim) -->
     <section class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 sm:p-6 shadow-2xl relative flex flex-col">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-800 mb-4 gap-2">
         <div>
-          <h2 class="text-base sm:text-lg font-extrabold text-white" id="chartSectorTitle">Matriz Detalhada</h2>
-          <p class="text-xs text-slate-400">12 critérios analíticos independentes calculados para o setor ativo.</p>
+          <h2 class="text-base sm:text-lg font-extrabold text-white" id="chartSectorTitle">Matriz de Critérios</h2>
+          <p class="text-xs text-slate-400">Esquerda = Pior / Risco Funcional &bull; Direita = Melhor / Preservação Institucional</p>
         </div>
         
         <!-- Filtro Rápido -->
@@ -119,25 +119,26 @@
         </div>
       </div>
 
-      <!-- Barra de Escala (0 a 5) -->
-      <div class="grid grid-cols-5 text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-2 px-1 text-center">
-        <div class="text-left">0 • Risco Baixo</div>
-        <div>1 • Moderado</div>
-        <div>2.5 • Elevado</div>
-        <div>4 • Crítico</div>
-        <div class="text-right">5 • Risco Extremo</div>
+      <!-- Cabeçalho das Duas Zonas com Divisor Central -->
+      <div class="grid grid-cols-2 text-xs sm:text-sm font-extrabold pb-2 mb-3 border-b border-slate-800/80 uppercase tracking-wider">
+        <div class="text-rose-400 flex items-center gap-1.5">
+          <span>◄</span> Zona de Alto Risco / Pior Cenário <span class="text-slate-500 font-normal">(-5 a 0)</span>
+        </div>
+        <div class="text-emerald-400 flex items-center justify-end gap-1.5 text-right">
+          <span class="text-slate-500 font-normal">(0 a +5)</span> Zona de Preservação / Melhor Cenário <span>►</span>
+        </div>
       </div>
 
-      <!-- Lista de Linhas / Critérios -->
-      <div id="chart-rows" class="space-y-3">
+      <!-- Lista das Linhas do Gráfico Centralizado -->
+      <div id="chart-rows" class="space-y-3.5">
         <!-- Render dinâmico -->
       </div>
 
-      <!-- Rodapé do Gráfico com a Média Geral Integrada -->
+      <!-- Rodapé com o Placar da Média Geral Ponderada -->
       <div class="mt-6 pt-4 border-t border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-950/70 p-4 rounded-xl border border-slate-800/80">
         <div>
-          <span class="text-xs font-bold uppercase text-slate-400 tracking-wider">Média Geral Ponderada do Setor</span>
-          <p class="text-xs text-slate-400">Consolidação de todos os 12 critérios de vulnerabilidade.</p>
+          <span class="text-xs font-bold uppercase text-slate-400 tracking-wider">Média Consolidada do Setor</span>
+          <p class="text-xs text-slate-400">Média aritmética exata dos critérios avaliados no eixo central.</p>
         </div>
         <div class="flex items-center gap-6">
           <div class="flex items-center gap-2">
@@ -154,7 +155,7 @@
       </div>
     </section>
 
-    <!-- Modal Detalhado -->
+    <!-- Modal Detalhado de Legislação -->
     <div id="detailsModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
       <div class="bg-slate-900 border border-slate-700 max-w-2xl w-full rounded-2xl shadow-2xl overflow-hidden">
         <div class="p-5 border-b border-slate-800 flex items-start justify-between">
@@ -173,7 +174,7 @@
                 <span class="w-2.5 h-2.5 rounded bg-[#00843D] border border-[#FFCC29]"></span>
                 Cenário Mudança Radical
               </span>
-              <span>Severidade: <span id="modalNotaMudanca"></span> / 5.0</span>
+              <span>Nota: <span id="modalNotaMudanca"></span></span>
             </div>
             <p id="modalDescMudanca" class="text-slate-300 text-xs leading-relaxed"></p>
           </div>
@@ -184,7 +185,7 @@
                 <span class="w-2.5 h-2.5 rounded bg-[#C8102E] border border-[#800000]"></span>
                 Cenário Reeleição com Recessão
               </span>
-              <span>Severidade: <span id="modalNotaReeleicao"></span> / 5.0</span>
+              <span>Nota: <span id="modalNotaReeleicao"></span></span>
             </div>
             <p id="modalDescReeleicao" class="text-slate-300 text-xs leading-relaxed"></p>
           </div>
@@ -203,101 +204,194 @@
   </main>
 
   <footer class="border-t border-slate-800 py-4 text-center text-xs text-slate-400">
-    Matriz Multicritério de Risco Funcional &middot; CF/88, Lei 8.112/90, Lei 11.892/08, LRF e PEC 32/2020.
+    Matriz Estratégica Bipolar &middot; Base normativa: CF/88, Lei 8.112/90, Lei 11.892/08, LRF e PEC 32/2020.
   </footer>
 
   <script>
     const database = {
-      educacao_fed: {
-        id: "educacao_fed",
-        name: "Educação Federal (IFs e UFEs)",
-        shortName: "Educação Federal",
-        icon: "🎓",
-        summary: "A Mudança agride violentamente as regras da rotina e estabilidade (aulas compulsórias e DE). A Reeleição sob recessão, por sua vez, penaliza gravemente o custeio dos prédios e o salário inflacionário.",
+      geral: {
+        id: "geral",
+        name: "Visão Geral Consolidada",
+        shortName: "Geral (Média)",
+        icon: "🌐",
+        summary: "Panorama integrado do funcionalismo. A Mudança penaliza fortemente os direitos funcionais e a estabilidade (-3.5 a -4.8), enquanto a Reeleição com recessão agride severamente o poder de compra e as condições materiais de trabalho (-3.0 a -4.5).",
         items: [
           {
             title: "1. Estabilidade e Segurança do Vínculo",
-            m: 4.0, r: 1.0,
-            descM: "Ameaça alta com a PEC 32: demissão facilitada por comissões externas após ciclos negativos e perda do cargo em 2ª instância judicial sem trânsito em julgado.",
-            descR: "Blindagem de vínculo 100% garantida pelo Executivo. Veto a qualquer projeto de flexibilização do Art. 41.",
-            leg: "Art. 41 da CF/88 e PEC 32/2020."
+            m: -3.8, r: 4.2,
+            descM: "Ameaça pela PEC 32: demissão facilitada por avaliação periódica de desempenho e perda de cargo após 2ª instância judicial sem trânsito em julgado.",
+            descR: "Estabilidade formal do Art. 41 blindada integralmente por veto presidencial contra reformas liberalizantes.",
+            leg: "Art. 41 da CF/88 e texto da PEC 32/2020."
           },
           {
-            title: "2. Regime de Dedicação Exclusiva (DE)",
-            m: 3.8, r: 1.0,
-            descM: "Conversão do adicional de DE em VPNI congelada e extinção de novas vagas em dedicação exclusiva para futuros editais.",
-            descR: "Manutenção do regime de DE nos termos da Lei 12.772/2012 sem qualquer plano de congelamento.",
-            leg: "Art. 20 da Lei 12.772/2012 e Tema 41 do STF."
-          },
-          {
-            title: "3. Carga Horária em Sala (Piso de Aulas)",
-            m: 4.8, r: 1.2,
-            descM: "Risco agudo e imediato: reedição da Portaria MEC 983 fixando 18h a 22h semanais de aula, estrangulando pesquisa e extensão.",
-            descR: "Carga horária e planos de trabalho (PIT) deliberados autonomamente pelos Conselhos Superiores sem ingerência do MEC.",
-            leg: "Portaria MEC nº 983/2020 e Art. 57 da LDB."
-          },
-          {
-            title: "4. Autonomia Didático-Científica (CONSUP)",
-            m: 4.5, r: 1.0,
-            descM: "Esvaziamento deliberado da autonomia dos órgãos colegiados por decretos federais padronizados em Brasília.",
-            descR: "Soberania dos colegiados internos garantida pela gestão ministerial.",
-            leg: "Art. 207 da CF/88 e Lei 11.892/2008."
-          },
-          {
-            title: "5. Perda Salarial Inflacionária (Arrocho)",
-            m: 3.5, r: 4.5,
-            descM: "Arrocho por política fiscal voluntária de austeridade e compressão de tabelas do funcionalismo.",
-            descR: "Ponto crítico da crise: queda brutal de receitas combinada com Congresso de oposição veta reajustes na LOA, gerando anos seguidos de perda inflacionária.",
+            title: "2. Reajustes Salariais e Inflação (Poder de Compra)",
+            m: -2.8, r: -3.5,
+            descM: "Arrocho por política liberal de contenção da folha de pagamento e congelamento de tabelas remuneratórias.",
+            descR: "Ponto crítico da crise: queda de arrecadação em recessão e Congresso opositor travam reposição inflacionária na LOA.",
             leg: "Art. 37, X e XV da CF/88."
           },
           {
-            title: "6. Asfixia Financeira de Custeio do Campus",
-            m: 3.0, r: 4.8,
-            descM: "Contenção orçamentária ideológica para forçar concessões a entidades privadas e ao Sistema S.",
-            descR: "Severo contingenciamento compulsório em recessão: falta de verba básica para energia, água, segurança, limpeza e insumos de laboratório.",
-            leg: "A folha salarial é obrigatória; cortes em crises recaem 100% sobre o custeio discricionário."
+            title: "3. Terceirização e Precarização de Funções",
+            m: -4.5, r: 3.5,
+            descM: "Abertura generalizada de contratos de cooperação privada, OSs e celetistas para postos antes preenchidos por concurso.",
+            descR: "Contenção de terceirizações no setor público direto, mantendo órgãos sob gestão estatutária.",
+            leg: "Tema 725 do STF e Art. 37-A pretendido pela PEC 32."
+          },
+          {
+            title: "4. Metas de Desempenho e Produtividade",
+            m: -4.2, r: 2.0,
+            descM: "Criação de métricas quantitativas centralizadas e comissões avaliadoras externas com potencial punitivo.",
+            descR: "Avaliações internas mantidas nos formatos tradicionais da Lei 8.112/90 sem comissões externas hostis.",
+            leg: "Regulamentação do Art. 41, § 1º, III da CF."
+          },
+          {
+            title: "5. Condições Físicas de Trabalho e Custeio",
+            m: -3.2, r: -4.5,
+            descM: "Cortes orçamentários focados em incentivar parcerias público-privadas ou privatização de estruturas.",
+            descR: "Severo contingenciamento de custeio por falta de receita no Tesouro: atrasos em limpeza, segurança e insumos básicos.",
+            leg: "Despesas discricionárias sofrem o primeiro e mais pesado contingenciamento orçamentário da LRF."
+          },
+          {
+            title: "6. Benefícios de Carreira e Adicionais",
+            m: -4.0, r: 3.0,
+            descM: "Fim definitivo de adicionais por tempo de serviço, quinquênios, licenças acumuláveis e gratificações variáveis.",
+            descR: "Manutenção do quadro de direitos adquiridos e planos de cargos existentes sem iniciativas de corte.",
+            leg: "A PEC 32 veda expressamente vantagens ligadas exclusivamente a tempo de serviço."
+          },
+          {
+            title: "7. Descontos Previdenciários (RPPS)",
+            m: -3.2, r: 1.0,
+            descM: "Risco de nova reforma previdenciária ampliando alíquotas extraordinárias para cobrir déficits do RPPS.",
+            descR: "Manutenção do quadro da EC 103/2019 sem sobretaxação punitiva sobre o funcionalismo.",
+            leg: "EC 103/2019 (margem para alíquotas de até 22%)."
+          },
+          {
+            title: "8. Concursos Públicos e Vagas Efetivas",
+            m: -4.0, r: -2.0,
+            descM: "Substituição do concurso por contratos temporários e cargos por vínculo de experiência sem estabilidade.",
+            descR: "Concursos estritamente contidos para cobrir reposição de aposentadorias/vacâncias essenciais.",
+            leg: "Art. 37, II e IX da CF/88."
+          },
+          {
+            title: "9. Autonomia Técnica vs. Interferência Política",
+            m: -4.0, r: 3.0,
+            descM: "Aumento de cargos de Liderança e Assessoramento ocupados por não concursados sobrepondo-se à hierarquia técnica.",
+            descR: "Manutenção do corpo técnico com proteção de carreiras e respeito às comissões permanentes.",
+            leg: "Art. 37, V da CF/88."
+          },
+          {
+            title: "10. Progressão Funcional e Topo da Carreira",
+            m: -3.8, r: 2.5,
+            descM: "Alongamento do tempo para chegar ao topo da carreira (aumento de steps de 15 para até 25 anos).",
+            descR: "Tabelas e interstícios de progressão funcional mantidos conforme leis específicas de cada cargo.",
+            leg: "Tema pacificado pelo STF: não há direito adquirido a regras futuras de progressão."
+          },
+          {
+            title: "11. Teletrabalho e Fiscalização Eletrônica",
+            m: -3.5, r: 3.0,
+            descM: "Regulamentação restritiva e punitiva do teletrabalho, com controle minucioso e corte de auxílios.",
+            descR: "Programas de Gestão e Desempenho (PGD) mantidos com flexibilidade e consenso técnico.",
+            leg: "Instrução Normativa nº 24/2023 do MGI."
+          },
+          {
+            title: "12. Clima Institucional e Segurança Psicológica",
+            m: -4.2, r: 2.5,
+            descM: "Ambiente institucional tenso marcado por ameaças veladas de exoneração e pressão por metas externas.",
+            descR: "Ambiente interno estável e protegido institucionalmente, apesar do desgaste com a escassez material.",
+            leg: "Garantias da Lei 8.112/90."
+          }
+        ]
+      },
+      educacao_fed: {
+        id: "educacao_fed",
+        name: "Educação Federal (IFs e Universidades)",
+        shortName: "Educação Federal",
+        icon: "🎓",
+        summary: "A Mudança agride frontalmente a sala de aula e a carreira (aumento compulsório de aulas e risco na DE). A Reeleição com recessão preserva a autonomia e o vínculo, mas asfixia financeiramente o custeio do campus e os salários.",
+        items: [
+          {
+            title: "1. Estabilidade e Segurança do Cargo",
+            m: -3.5, r: 4.5,
+            descM: "Ameaça por comissões avaliadoras externas e demissão após notas baixas em metas de aprovação escolar.",
+            descR: "Estabilidade 100% blindada pelo Executivo federal; veto sistemático a qualquer ataque ao vínculo docente.",
+            leg: "Art. 41 da CF/88 e Art. 207."
+          },
+          {
+            title: "2. Regime de Dedicação Exclusiva (DE)",
+            m: -3.5, r: 4.5,
+            descM: "Conversão do adicional de DE em VPNI congelada (absorvida pela inflação) e extinção de DE para novos concursados.",
+            descR: "Regime de DE rigorosamente mantido na íntegra da Lei 12.772/2012 sem congelamentos.",
+            leg: "Art. 20 e 21 da Lei 12.772/2012 e Tema 41 do STF."
+          },
+          {
+            title: "3. Carga Horária em Sala (Piso de Aulas)",
+            m: -4.8, r: 4.0,
+            descM: "Ponto crítico: imposição de portaria do MEC elevando o piso para 18h a 22h semanais de aula, aniquilando a pesquisa.",
+            descR: "Carga horária e planos de trabalho (PIT) regulados exclusivamente pelos Conselhos Superiores (CONSUP/CONSUN).",
+            leg: "Portaria MEC 983/2020 e Art. 57 da LDB."
+          },
+          {
+            title: "4. Autonomia do CONSUP e Órgãos Colegiados",
+            m: -4.5, r: 4.5,
+            descM: "Esvaziamento das decisões do Conselho Superior por decretos federais padronizados em Brasília sobre PITs.",
+            descR: "Soberania dos colegiados internos garantida e respeitada pela Secretaria de Educação Tecnológica.",
+            leg: "Art. 207 da CF/88 e Lei 11.892/2008."
+          },
+          {
+            title: "5. Reajuste Salarial vs. Inflação (Poder de Compra)",
+            m: -2.5, r: -3.8,
+            descM: "Arrocho por política fiscal explícita de contenção dos salários docentes federais.",
+            descR: "Congelamento forçado pela realidade recessiva: queda de receitas e veto da oposição a reajustes salariais na LOA.",
+            leg: "Art. 37, X e XV da CF/88."
+          },
+          {
+            title: "6. Custeio dos Campi e Manutenção Predial",
+            m: -3.0, r: -4.8,
+            descM: "Asfixia proposital visando forçar parcerias privadas ou repasse de prédios ao Sistema S.",
+            descR: "Ponto mais crítico na crise: contingenciamento severo de despesas discricionárias (falta verba para energia, água e limpeza).",
+            leg: "A folha salarial é obrigatória; o corte em crises recai 100% sobre o custeio dos campi."
           },
           {
             title: "7. Bolsas de Pesquisa (PIBIC) e Extensão",
-            m: 4.2, r: 3.5,
-            descM: "Desmonte dos programas de pesquisa aplicada para focar exclusivamente em ensino médio profissionalizante de massa.",
-            descR: "Bolsas de pesquisa preservadas formalmente, mas sem reajuste de valor e com atrasos de liberação pelo Tesouro.",
+            m: -4.2, r: -2.0,
+            descM: "Desmonte dos programas de pesquisa aplicada para focar unicamente em ensino médio técnico conteudista.",
+            descR: "Diretriz de pesquisa e bolsas preservada, embora com valores per capita congelados pela escassez de recursos.",
             leg: "Art. 6º e 7º da Lei 11.892/2008."
           },
           {
-            title: "8. Intervenção na Eleição de Reitores",
-            m: 4.6, r: 1.0,
-            descM: "Alteração da Lei 11.892 para instituir indicação direta de interventores alinhados ou lista tríplice.",
-            descR: "Nomeação obrigatória e imediata do 1º colocado eleito pela comunidade acadêmica.",
+            title: "8. Eleições Diretas para Reitor e Diretores",
+            m: -4.6, r: 4.8,
+            descM: "Tentativa de mudar a Lei 11.892 para instituir indicação direta de interventores alinhados ou lista tríplice.",
+            descR: "Nomeação obrigatória e imediata do 1º colocado eleito democraticamente pela comunidade escolar.",
             leg: "Art. 12 da Lei 11.892/2008."
           },
           {
             title: "9. Concursos Docentes e de TAEs",
-            m: 4.0, r: 3.5,
-            descM: "Substituição ampla de efetivos por professores temporários e terceirização de postos técnicos.",
-            descR: "Concursos estritamente congelados para ampliação líquida; reposição restrita às vacâncias essenciais.",
+            m: -4.0, r: -1.5,
+            descM: "Substituição ampla de docentes efetivos por temporários e terceirização de cargos técnicos de apoio.",
+            descR: "Concursos estritamente mantidos para repor vagas de aposentadorias/vacâncias (banco de professor equivalente).",
             leg: "Decreto do Banco de Professor Equivalente."
           },
           {
-            title: "10. Agravamento de Alíquotas do RPPS",
-            m: 3.5, r: 2.0,
-            descM: "Pressão por novas reformas fiscais que ampliem a sobretaxa progressiva previdenciária.",
-            descR: "Manutenção do quadro da EC 103/2019 sem sobretaxação punitiva adicional.",
+            title: "10. Retribuição por Titulação (RT) e Progressão",
+            m: -3.5, r: 3.5,
+            descM: "Achatamento da tabela remuneratória e desvinculação progressiva do percentual de doutorado/mestrado.",
+            descR: "Tabela e progressões funcionais por titulação mantidas nos termos da Lei 12.772/2012.",
+            leg: "Lei 12.772/2012."
+          },
+          {
+            title: "11. Liberdade de Cátedra e Pluralismo de Ideias",
+            m: -4.2, r: 4.0,
+            descM: "Fiscalização ideológica de planos de ensino, perseguição a projetos acadêmicos e projetos de censura.",
+            descR: "Garantia plena da liberdade pedagógica e autonomia de pensamento nas salas de aula.",
+            leg: "Art. 206, II da CF/88."
+          },
+          {
+            title: "12. Alíquotas Previdenciárias Progressivas",
+            m: -3.0, r: 1.5,
+            descM: "Risco de nova reforma ampliando as alíquotas do RPPS para docentes com altos salários.",
+            descR: "Estabilidade do marco previdenciário atual sem elevação punitiva de alíquotas.",
             leg: "EC 103/2019."
-          },
-          {
-            title: "11. Retribuição por Titulação (RT)",
-            m: 3.8, r: 1.0,
-            descM: "Tentativa de desvincular ou achatar o percentual pago para mestres e doutores na tabela salarial.",
-            descR: "Tabela de RT mantida integralmente de acordo com a Lei 12.772/2012.",
-            leg: "Anexo IV da Lei 12.772/2012."
-          },
-          {
-            title: "12. Risco de Assédio e Perseguição Direta",
-            m: 4.0, r: 1.5,
-            descM: "Fiscalização ideológica de conteúdos didáticos, projetos de extensão e planos pedagógicos.",
-            descR: "Liberdade de cátedra e pluralismo de ideias resguardados sem ingerências ideológicas.",
-            leg: "Art. 206, II e III da CF/88."
           }
         ]
       },
@@ -306,182 +400,182 @@
         name: "Saúde Pública e Assistência (SUS)",
         shortName: "Saúde e SUS",
         icon: "🏥",
-        summary: "Na Mudança, o perigo é a privatização/terceirização em massa via OSs e fim da estabilidade. Na Reeleição sob recessão, o perigo é o desabastecimento agudo de remédios e falta de leitos/insumos.",
+        summary: "Na Mudança, o setor sofre o maior risco de privatização total e terceirização por OSs (-4.8). Na Reeleição com recessão, a crise rebate na escassez severa de remédios e insumos hospitalares (-4.5).",
         items: [
           {
-            title: "1. Estabilidade e Segurança do Vínculo",
-            m: 4.5, r: 1.2,
-            descM: "Exclusão do rol de carreiras típicas de Estado pela PEC 32; perda de estabilidade para novos e vulnerabilidade dos atuais.",
-            descR: "Proteção estatutária ampla garantida pelo governo federal.",
+            title: "1. Estabilidade e Segurança do Cargo",
+            m: -4.5, r: 3.8,
+            descM: "A PEC 32 retira a estabilidade para novas contratações na saúde, rebaixando a categoria para regime celetista.",
+            descR: "Defesa irrestrita do regime estatutário para os profissionais efetivos do SUS e hospitais universitários.",
             leg: "Art. 41 da CF/88."
           },
           {
             title: "2. Privatização via Organizações Sociais (OSs)",
-            m: 5.0, r: 1.5,
+            m: -5.0, r: 1.5,
             descM: "Entrega irrestrita de UPAs e hospitais a empresas privadas e OSs, remanejando ou esvaziando servidores concursados.",
             descR: "Resistência ideológica a terceirizações; priorização do modelo público estatal via EBSERH.",
             leg: "ADI 1.923/STF."
           },
           {
-            title: "3. Cumprimento do Piso Salarial Nacional",
-            m: 3.8, r: 2.5,
-            descM: "Tentativas de desindexação ou condicionamento do piso a limites de equilíbrio financeiro local.",
-            descR: "Manutenção do compromisso com o piso da enfermagem, mas com repasses federais atrasados pela crise.",
+            title: "3. Piso Salarial Nacional (Enfermagem/ACS)",
+            m: -3.8, r: 3.0,
+            descM: "Tentativas de desindexação ou flexibilização dos pisos salariais sob pretexto de equilíbrio financeiro local.",
+            descR: "Manutenção do compromisso com o piso da enfermagem e complementação federal aos municípios.",
             leg: "Lei nº 14.434/2022."
           },
           {
-            title: "4. Escalas, Plantões e Gratificações",
-            m: 4.0, r: 2.0,
-            descM: "Corte sistemático de adicionais de plantão e pressão por pejotização de equipes hospitalares.",
-            descR: "Acordos e gratificações de sobreaviso mantidos conforme regulamentos locais.",
+            title: "4. Escalas de Plantão e Adicionais Noturnos",
+            m: -4.0, r: 2.0,
+            descM: "Fiscalização draconiana, corte de adicionais de plantão e substituição de plantonistas por empresas PJ.",
+            descR: "Acordos coletivos de escalas e gratificações de sobreaviso mantidos sem rupturas.",
             leg: "Leis orgânicas de saúde estaduais."
           },
           {
-            title: "5. Perda Salarial Inflacionária (Arrocho)",
-            m: 3.2, r: 4.4,
-            descM: "Política de compressão salarial deliberada para os quadros da saúde.",
-            descR: "Efeito direto da recessão que comprime as receitas tributárias do Fundo Nacional de Saúde.",
+            title: "5. Reajuste Salarial vs. Inflação (Poder de Compra)",
+            m: -3.0, r: -3.5,
+            descM: "Congelamento salarial generalizado para conter gastos com a folha de saúde.",
+            descR: "Perda salarial inflacionária causada pela recessão que derruba as receitas vinculadas ao FNS.",
             leg: "Art. 198 da CF/88."
           },
           {
             title: "6. Desabastecimento de Remédios e Insumos",
-            m: 2.5, r: 4.8,
-            descM: "Contratos de suprimento terceirizados que repassam a responsabilidade para operadores privados.",
-            descR: "Cenário dramático: crise fiscal severa atrasa compra de medicamentos de alto custo, reagentes e manutenção de UTIs.",
+            m: -2.5, r: -4.8,
+            descM: "Gestão por corte de custos privados, repassando o desabastecimento para operadores terceirizados.",
+            descR: "Cenário crítico: crise recessiva gera escassez severa de remédios, reagentes e manutenção de UTIs.",
             leg: "Execução orçamentária do Ministério da Saúde."
           },
           {
             title: "7. Aposentadoria Especial por Insalubridade",
-            m: 4.2, r: 2.2,
-            descM: "Endurecimento das perícias do LTCAT para negar tempo especial aos 25 anos de atividade biológica.",
+            m: -4.0, r: 2.5,
+            descM: "Endurecimento das perícias do LTCAT para travar aposentadoria especial aos 25 anos de atividade biológica.",
             descR: "Manutenção dos entendimentos protetivos consolidados na Súmula Vinculante 33.",
             leg: "Art. 40, § 4º-B da CF/88."
           },
           {
             title: "8. Concursos Públicos Estatutários",
-            m: 4.8, r: 2.0,
+            m: -4.8, r: 2.0,
             descM: "Fim definitivo de editais estatutários para médicos e enfermeiros, substituídos 100% por celetistas.",
-            descR: "Concursos regulares mantidos, mas contingenciados pela capacidade do Tesouro.",
-            leg: "Art. 37, II da CF."
+            descR: "Concursos regulares mantidos, embora contingenciados pela capacidade do Tesouro.",
+            leg: "Art. 37, II da CF/88."
           },
           {
             title: "9. Assédio Institucional por Chefias Privadas",
-            m: 4.4, r: 2.0,
+            m: -4.4, r: 2.5,
             descM: "Conflito direto e desvio de função imposto por gestores privados de OSs sobre os servidores efetivos.",
             descR: "Hierarquia técnica mantida dentro do quadro do funcionalismo público tradicional.",
             leg: "Princípio da Impessoalidade (Art. 37, caput)."
           },
           {
             title: "10. Gratificações por Desempenho e Metas",
-            m: 4.0, r: 2.0,
-            descM: "Vinculação de salários a metas inatingíveis de tempo máximo por atendimento/consulta.",
-            descR: "Metas pactuadas em programas nacionais de atenção primária mantidas.",
+            m: -3.8, r: 2.0,
+            descM: "Vinculação de gratificações a metas inatingíveis de tempo máximo por consulta/atendimento.",
+            descR: "Metas pactuadas em programas nacionais de atenção primária mantidas sem penalizações punitivas.",
             leg: "Portarias do SUS."
           },
           {
             title: "11. Saúde Mental e Esgotamento (Burnout)",
-            m: 4.2, r: 4.0,
-            descM: "Sobrecarga de metas com redução contínua de quadro funcional concursado.",
-            descR: "Esgotamento gerado pelo trabalho em unidades hospitalares sucateadas e sem remédios.",
+            m: -4.2, r: -3.5,
+            descM: "Sobrecarga de metas com redução drástica do quadro funcional efetivo.",
+            descR: "Esgotamento severo gerado pelo trabalho em hospitais sucateados pela recessão fiscal.",
             leg: "Legislação de saúde ocupacional."
           },
           {
             title: "12. Pressão por Judicialização da Saúde",
-            m: 3.0, r: 4.5,
+            m: -3.0, r: -4.5,
             descM: "Transição do passivo judicial para as empresas administradoras das unidades.",
-            descR: "Profissionais no front sofrendo intimações diárias por falta de vagas e insumos indisponíveis no estoque.",
+            descR: "Profissionais no front sofrendo intimações e bloqueios por falta de leitos e medicamentos.",
             leg: "Decisões do STF sobre fornecimento de remédios."
           }
         ]
       },
       tipicas_estado: {
         id: "tipicas_estado",
-        name: "Carreiras Típicas de Estado (Auditores, PF/PRF e Controle)",
+        name: "Carreiras Típicas de Estado (Auditores e PF)",
         shortName: "Carreiras de Estado",
         icon: "⚖️",
-        summary: "O setor institucionalmente mais blindado contra demissão na PEC 32. O risco na Mudança é a ingerência política em fiscalizações; na Reeleição com recessão, é a falta de verba para operações e viaturas.",
+        summary: "O setor com maior blindagem funcional na PEC 32. O risco na Mudança concentra-se em ingerência política em fiscalizações (-4.0); na Reeleição sob recessão, falta verba para diárias e viaturas (-3.5).",
         items: [
           {
-            title: "1. Estabilidade e Segurança do Vínculo",
-            m: 2.0, r: 1.0,
-            descM: "Blindadas nominalmente na PEC 32 como exclusivas de Estado. Menor risco de perda de estabilidade.",
-            descR: "Proteção constitucional e institucional plena.",
+            title: "1. Estabilidade e Segurança do Cargo",
+            m: 2.5, r: 4.8,
+            descM: "Totalmente preservada. A PEC 32 protege nominalmente as 'carreiras exclusivas de Estado'.",
+            descR: "Estabilidade 100% blindada e prestigiada pelo desenho republicano tradicional.",
             leg: "Art. 39-A da proposta da PEC 32."
           },
           {
             title: "2. Terceirização da Atividade-Fim",
-            m: 1.5, r: 1.0,
-            descM: "Proibição constitucional de terceirizar fiscalização tributária, poder de polícia e diplomacia.",
-            descR: "Zero risco de terceirização.",
-            leg: "Princípio da indelegabilidade de atos de império."
+            m: 3.5, r: 4.5,
+            descM: "Blindagem constitucional absoluta: é expressamente vedada a terceirização de poder de polícia e fiscalização.",
+            descR: "Zero risco de terceirização ou concessão a entidades privadas.",
+            leg: "Princípio da indelegabilidade de atos estatais de império."
           },
           {
             title: "3. Autonomia em Fiscalizações e Inquéritos",
-            m: 4.8, r: 2.0,
-            descM: "Risco agudo: ingerência e trocas políticas de delegados, auditores fiscais e chefias para blindar aliados.",
-            descR: "Respeito à autonomia investigativa da Polícia Federal, Receita e órgãos de controle.",
+            m: -4.2, r: 3.5,
+            descM: "Ponto crítico: risco severo de interferência política em operações fiscais e investigações para blindar aliados.",
+            descR: "Respeito à autonomia investigativa da Polícia Federal, Receita Federal e órgãos de controle.",
             leg: "Leis orgânicas da PF e Receita Federal."
           },
           {
-            title: "4. Perda Salarial Inflacionária (Arrocho)",
-            m: 2.5, r: 3.5,
-            descM: "Poder de barganha corporativo amortece perdas, mas sob pressão de teto de gastos.",
-            descR: "Pressão corporativa forte consegue atenuar perdas, mas o aperto fiscal limita reajustes reais.",
+            title: "4. Reajustes Salariais e Teto Constitucional",
+            m: -1.5, r: -2.0,
+            descM: "Forte poder de lobby corporativo e bancadas fortes amortecem perdas salariais.",
+            descR: "Pressão corporativa atenua perdas, mas o aperto fiscal limita ganhos reais na recessão.",
             leg: "Art. 37, XI da CF (Teto Constitucional)."
           },
           {
-            title: "5. Concursos Públicos e Efetivo",
-            m: 2.0, r: 3.2,
-            descM: "Prioridade na realização de novos editais em governos de perfil punitivista e policial.",
-            descR: "Concursos contidos pelo limite fiscal em cenário de recessão.",
+            title: "5. Concursos Públicos e Reposição de Efetivo",
+            m: 2.0, r: 1.0,
+            descM: "Prioridade na realização de novos editais em governos com pauta punitivista e policial.",
+            descR: "Concursos mantidos, porém com turmas mais enxutas em razão do orçamento de crise.",
             leg: "Autorizações orçamentárias do MGI."
           },
           {
             title: "6. Regime de Remuneração por Subsídio Único",
-            m: 3.0, r: 1.5,
-            descM: "Tentativa de suprimir verbas indenizatórias e auxílios negociados por fora do subsídio.",
-            descR: "Estrutura remuneratória por subsídio e adicionais mantida.",
-            leg: "Art. 39, § 4º da CF."
+            m: -2.0, r: 2.5,
+            descM: "Tentativa de suprimir verbas indenizatórias negociadas por fora do subsídio.",
+            descR: "Estrutura remuneratória por subsídio e adicionais mantida sem rupturas.",
+            leg: "Art. 39, § 4º da CF/88."
           },
           {
-            title: "7. Custeio Operacional de Viaturas e Missões",
-            m: 1.5, r: 4.5,
-            descM: "Aparelhamento prioritário com amplas verbas para viaturas, armamentos e sistemas de inteligência.",
-            descR: "Corte severo de diárias operacionais e falta de combustível para viaturas e operações de campo.",
+            title: "7. Custeio de Operações, Armas e Viaturas",
+            m: 2.0, r: -3.5,
+            descM: "Aparelhamento prioritário com amplas verbas para viaturas blindadas e sistemas de inteligência.",
+            descR: "Corte severo de diárias operacionais e falta de combustível para viaturas em missões de campo.",
             leg: "Fundo Nacional de Segurança Pública."
           },
           {
-            title: "8. Avaliação de Produtividade Interna",
-            m: 2.0, r: 1.5,
+            title: "8. Avaliação de Produtividade Corporativa",
+            m: -1.5, r: 3.0,
             descM: "Critérios de avaliação mantidos sob a gestão das próprias corporações.",
             descR: "Avaliações corporativas tradicionais sem viés persecutório.",
             leg: "Estatutos próprios de carreira."
           },
           {
-            title: "9. Paridade e Previdência Policial Especial",
-            m: 3.8, r: 2.0,
+            title: "9. Paridade e Previdência Especial",
+            m: -2.5, r: 1.5,
             descM: "Pressão contínua para equiparar a previdência policial às regras do regime geral do INSS.",
             descR: "Manutenção da Lei Complementar 51/1985 e Sistema de Proteção Social.",
             leg: "LC nº 51/1985."
           },
           {
-            title: "10. Topo da Carreira e Progressão",
-            m: 2.5, r: 1.5,
-            descM: "Possível aumento de tempo para chegar ao topo para ingressantes futuros.",
-            descR: "Tabelas e interstícios curtos de progressão preservados.",
+            title: "10. Topo da Carreira e Progressão Rápida",
+            m: -2.0, r: 3.0,
+            descM: "Possível aumento de tempo para chegar ao topo apenas para ingressantes futuros.",
+            descR: "Tabelas e interstícios curtos de progressão integralmente preservados.",
             leg: "Leis de carreiras típicas da União."
           },
           {
             title: "11. Assédio Moral Organizacional",
-            m: 3.5, r: 1.5,
-            descM: "Transferências compulsórias de servidores que atuem em investigações sensíveis.",
-            descR: "Inamovibilidade relativa e garantias contra perseguições funcionais.",
-            leg: "Garantias estatutárias."
+            m: -3.5, r: 2.5,
+            descM: "Transferências compulsórias e abertura de corregedorias contra quem atua em casos sensíveis.",
+            descR: "Garantias estatutárias contra transferências e perseguições funcionais.",
+            leg: "Garantias funcionais da Lei Orgânica."
           },
           {
             title: "12. Descentralização e Fusão de Órgãos",
-            m: 3.8, r: 1.2,
-            descM: "Ameaça de fundir órgãos de controle ou esvaziar competências investigativas do Ministério Público e TCU.",
+            m: -3.8, r: 2.0,
+            descM: "Ameaça de fundir órgãos de controle ou esvaziar competências do Ministério Público e TCU.",
             descR: "Estrutura institucional dos órgãos federais mantida íntegra.",
             leg: "Art. 71 da CF/88."
           }
@@ -489,91 +583,91 @@
       },
       administrativo_geral: {
         id: "administrativo_geral",
-        name: "Carreiras Administrativas e Apoio (INSS, Ministérios e Autarquias)",
-        shortName: "Apoio e Administrativo",
+        name: "Carreiras Administrativas e Apoio (INSS e Ministérios)",
+        shortName: "Apoio / Administrativo",
         icon: "📋",
-        summary: "O setor mais vulnerável de todo o serviço público. Na Mudança, corre risco crítico de demissão, automação e extinção de cargos; na Reeleição sob recessão, sofre com agências sem ar-condicionado e arrocho salarial.",
+        summary: "O grupo mais vulnerável à PEC 32. Na Mudança, sofre com terceirização total e perda de estabilidade (-4.8). Na Reeleição com recessão, enfrenta arrocho salarial e agências sucateadas (-4.0).",
         items: [
           {
-            title: "1. Estabilidade e Segurança do Vínculo",
-            m: 4.8, r: 1.0,
+            title: "1. Estabilidade e Segurança do Cargo",
+            m: -4.8, r: 4.0,
             descM: "Vulnerabilidade máxima: a PEC 32 extingue a estabilidade para novas contratações na área-meio e facilita demissões.",
-            descR: "Estabilidade do Art. 41 blindada integralmente pelo Executivo federal.",
+            descR: "Estabilidade do Art. 41 blindada integralmente pelo Executivo federal contra propostas de flexibilização.",
             leg: "Art. 41 da CF/88."
           },
           {
             title: "2. Terceirização e Automação de Funções",
-            m: 5.0, r: 2.0,
+            m: -5.0, r: 2.0,
             descM: "Substituição ampla de atendimento, protocolo e gestão de processos por terceirizados e inteligência artificial.",
             descR: "Contenção de terceirizações no âmbito dos órgãos federais diretos.",
             leg: "Decreto nº 9.507/2018."
           },
           {
             title: "3. Perda Salarial Inflacionária (Arrocho)",
-            m: 4.0, r: 4.5,
+            m: -3.8, r: -4.0,
             descM: "Baixo poder de barganha corporativa resulta em reajuste zero e rápida erosão do poder de compra.",
-            descR: "Arrocho violento: a recessão econômica impede qualquer reposição salarial inflacionária para carreiras gerais.",
-            leg: "Art. 37, X da CF."
+            descR: "Arrocho severo: a recessão econômica impede qualquer reposição salarial inflacionária para carreiras gerais.",
+            leg: "Art. 37, X da CF/88."
           },
           {
             title: "4. Conversão de Gratificações em VPNI",
-            m: 4.5, r: 1.5,
-            descM: "Extinção de gratificações administrativas de desempenho (ex.: GDASS), transformando o saldo em VPNI sem reajuste.",
+            m: -4.5, r: 2.5,
+            descM: "Extinção de gratificações administrativas variáveis (ex.: GDASS), transformando o saldo em VPNI sem reajuste.",
             descR: "Manutenção da estrutura de vencimento básico somado às gratificações pactuadas.",
             leg: "Jurisprudência de absorção de VPNI do STF e TCU."
           },
           {
             title: "5. Substituição por Comissionados Externos",
-            m: 4.8, r: 2.0,
+            m: -4.8, r: 2.5,
             descM: "Aprovação de cargos de Liderança e Assessoramento abertos a pessoas sem concurso na chefia de setores técnicos.",
-            descR: "Reserva de percentual expressivo de funções comissionadas exclusivas para servidores efetivos.",
-            leg: "Art. 37, V da CF."
+            descR: "Reserva legal de percentual expressivo de funções comissionadas exclusivas para servidores de carreira.",
+            leg: "Art. 37, V da CF/88."
           },
           {
             title: "6. Metas Abusivas Digitais e PAD",
-            m: 4.6, r: 2.2,
+            m: -4.5, r: 2.0,
             descM: "Imposição de metas digitais desumanas de análise de requerimentos sob ameaça direta de demissão por insuficiência.",
             descR: "Metas de produtividade negociadas em acordos setoriais com sindicatos.",
             leg: "Portarias do MGI sobre PGD."
           },
           {
             title: "7. Condições Físicas das Agências e Postos",
-            m: 3.5, r: 4.8,
-            descM: "Sucateamento deliberado para justificar privatização de canais de atendimento.",
-            descR: "Crise recessiva deixa agências sem verba para ar-condicionado, segurança patrimonial e computadores modernos.",
+            m: -3.5, r: -4.5,
+            descM: "Sucateamento proposital para justificar privatização de canais de atendimento.",
+            descR: "Crise recessiva deixa agências sem verba para ar-condicionado, segurança e computadores modernos.",
             leg: "Execução orçamentária de autarquias."
           },
           {
             title: "8. Concursos Públicos para Nível Médio/Técnico",
-            m: 5.0, r: 3.8,
-            descM: "Extinção definitiva de concursos para cargos de nível intermediário, priorizando contratos temporários.",
-            descR: "Concursos autorizados apenas em caráter de extrema emergência via CNU.",
+            m: -5.0, r: -2.0,
+            descM: "Extinção definitiva de concursos para nível intermediário, priorizando contratos temporários.",
+            descR: "Concursos autorizados apenas pontualmente pelo CNU para preencher vacâncias críticas.",
             leg: "Art. 37, II da CF."
           },
           {
             title: "9. Alíquotas Progressivas do RPPS",
-            m: 3.5, r: 1.8,
+            m: -3.5, r: 1.0,
             descM: "Maior impacto relativo da sobretaxa da previdência sobre salários médios e baixos.",
-            descR: "Alíquotas previdenciárias mantidas sem novos agravamentos fiscais.",
-            leg: "EC 103/2019."
+            descR: "Alíquotas previdenciárias mantidas sem novas elevações extraordinárias.",
+            leg: "Emenda Constitucional 103/2019."
           },
           {
             title: "10. Teletrabalho e Controle Eletrônico Punitivo",
-            m: 4.0, r: 2.0,
+            m: -3.8, r: 3.0,
             descM: "Controle invasivo por minuto trabalhado e corte de auxílios para quem opta pelo teletrabalho.",
-            descR: "Programas de Gestão e Desempenho mantidos com flexibilidade e consenso.",
-            leg: "IN nº 24/2023 do MGI."
+            descR: "PGD mantido com flexibilidade acordada e autonomia técnica de trabalho remoto.",
+            leg: "Instrução Normativa nº 24/2023 do MGI."
           },
           {
             title: "11. Sobrecarga por Falta de Pessoal",
-            m: 4.5, r: 4.2,
-            descM: "Aposentadorias em massa sem qualquer reposição de servidores.",
+            m: -4.5, r: -3.5,
+            descM: "Aposentadorias em massa sem reposição gerando colapso de atendimento.",
             descR: "Mesmo problema: falta de caixa para nomeações faz acumular milhões de processos pendentes sobre poucos servidores.",
             leg: "Relatórios de auditoria do TCU."
           },
           {
             title: "12. Desvio de Função Institucionalizado",
-            m: 4.5, r: 2.5,
+            m: -4.5, r: 2.0,
             descM: "Técnicos executando tarefas de analistas sem qualquer contrapartida salarial ou reconhecimento.",
             descR: "Fiscalização sindical atuante contra desvios grosseiros de atribuições.",
             leg: "Súmula 378 do STJ."
@@ -585,88 +679,88 @@
         name: "Segurança Pública e Prisional (PM, PC e Penal)",
         shortName: "Segurança e Prisional",
         icon: "🛡️",
-        summary: "Na Mudança, a segurança é prestigiada com viaturas e concursos, mas corre risco de privatização de presídios e perdas em pensões. Na Reeleição com recessão, falta gasolina para viaturas e trava a paridade salarial.",
+        summary: "Na Mudança, a segurança tem reforço de armamento e concursos (+3.0), mas corre risco de privatização de presídios (-4.5). Na Reeleição com recessão, falta viatura e manutenção nos presídios (-4.0).",
         items: [
           {
-            title: "1. Estabilidade e Segurança do Vínculo",
-            m: 1.5, r: 1.0,
-            descM: "Ampla proteção constitucional na PEC 32 como atividade essencial do Estado.",
-            descR: "Estabilidade institucional integralmente garantida.",
+            title: "1. Estabilidade e Segurança do Cargo",
+            m: 3.0, r: 4.5,
+            descM: "Ampla proteção normativa como carreira de segurança essencial na PEC 32.",
+            descR: "Estabilidade institucional integralmente resguardada.",
             leg: "Art. 144 da CF/88."
           },
           {
             title: "2. Concursos Públicos e Reposição de Tropa",
-            m: 1.5, r: 3.8,
+            m: 3.5, r: 1.0,
             descM: "Prioridade absoluta de editais e ampliação de contingente em governos com pauta punitivista.",
             descR: "Concursos contidos pelo limite fiscal em estados quebrados.",
             leg: "LRF nos estados."
           },
           {
             title: "3. Armamento, Viaturas e Equipamentos",
-            m: 1.5, r: 4.5,
+            m: 3.0, r: -3.5,
             descM: "Aparelhamento prioritário com modernização bélica e tecnologia de monitoramento.",
             descR: "Crise nos estados atrasa compras de coletes balísticos, manutenção de viaturas e combustível.",
             leg: "Fundo Nacional de Segurança Pública."
           },
           {
             title: "4. Perda Salarial Inflacionária (Arrocho)",
-            m: 3.0, r: 4.2,
+            m: -1.0, r: -3.5,
             descM: "Aumentos concedidos preferencialmente à tropa, mas limitados pelo teto de gastos estaduais.",
             descR: "Congelamento salarial severo em decorrência do colapso de arrecadação do ICMS nos estados.",
             leg: "Art. 42 da CF/88."
           },
           {
             title: "5. Aposentadoria e Paridade / Integralidade",
-            m: 3.8, r: 2.0,
+            m: -2.5, r: 1.5,
             descM: "Tentativa de equipes econômicas liberais de elevar idade e cortar pensões militares.",
             descR: "Manutenção do Sistema de Proteção Social dos Militares (Lei 13.954/2019).",
             leg: "Lei Federal nº 13.954/2019."
           },
           {
             title: "6. Autonomia Operacional vs. Aparelhamento",
-            m: 4.5, r: 2.2,
+            m: -3.5, r: 2.5,
             descM: "Risco agudo de uso ideológico da força policial e intervenções diretas no comando das tropas.",
             descR: "Comando técnico com obediência aos limites republicanos e controle externo do MP.",
-            leg: "Art. 129, VII da CF."
+            leg: "Art. 129, VII da CF/88."
           },
           {
             title: "7. Fiscalização e Câmeras Corporais",
-            m: 1.5, r: 3.5,
+            m: 2.5, r: -2.5,
             descM: "Flexibilização ou supressão da obrigatoriedade do uso de câmeras corporais operacionais.",
             descR: "Exigência rigorosa de câmeras corporais como política de redução de letalidade.",
             leg: "Diretrizes do Ministério da Justiça e STF."
           },
           {
             title: "8. Privatização de Presídios (PPPs Prisionais)",
-            m: 4.8, r: 1.8,
+            m: -4.2, r: 2.5,
             descM: "Expansão maciça de PPPs prisionais, esvaziando as atribuições dos policiais penais estatutários.",
             descR: "Fortalecimento exclusivo da Polícia Penal pública criada pela EC 104.",
             leg: "Emenda Constitucional nº 104/2019."
           },
           {
             title: "9. Direitos Sindicais e de Mobilização",
-            m: 4.2, r: 2.0,
+            m: -4.0, r: 1.5,
             descM: "Punições disciplinares rigorosas contra mobilizações de policiais civis e penais.",
             descR: "Abertura para diálogo institucional com entidades de classe.",
-            leg: "Tema 41 do STF (vedação de greve na segurança)."
+            leg: "Tema 41 do STF."
           },
           {
             title: "10. Saúde Mental e Apoio Psicológico",
-            m: 3.5, r: 3.2,
+            m: -2.0, r: 2.0,
             descM: "Foco exclusivo em metas operacionais sem orçamento dedicado à saúde mental da tropa.",
-            descR: "Diretrizes teóricas de saúde mental, mas com falta de verba para psicólogos no quadro.",
+            descR: "Programas de valorização da saúde mental e redução de suicídios nas forças de segurança.",
             leg: "Lei do SUSP (Lei 13.675/2018)."
           },
           {
             title: "11. Risco de Letalidade e Vitimização",
-            m: 4.0, r: 3.5,
+            m: -3.5, r: -2.0,
             descM: "Aumento de confrontos em operações violentas sem planejamento tático adequado.",
-            descR: "Maior contenção operacional, mas com riscos inerentes à atividade policial em áreas dominadas pelo crime.",
+            descR: "Maior contenção operacional, mas com riscos inerentes à atividade policial em áreas de conflito.",
             leg: "Protocolos operacionais de segurança."
           },
           {
             title: "12. Estrutura de Delegacias e Presídios",
-            m: 2.5, r: 4.8,
+            m: 1.5, r: -4.5,
             descM: "Reformas pontuais financiadas por emendas parlamentares da bancada da segurança.",
             descR: "Delegacias sucateadas e superpopulação prisional sem orçamento para reformas estruturais.",
             leg: "Lei de Execução Penal."
@@ -678,97 +772,97 @@
         name: "Poder Judiciário e Ministério Público",
         shortName: "Judiciário e MP",
         icon: "🏛️",
-        summary: "O setor mais forte e autônomo da República. Amparado pelo duodécimo obrigatório, sofre impacto mínimo na crise fiscal. O perigo na Mudança é a pressão política sobre cortes superiores e ministros.",
+        summary: "O setor institucionalmente mais blindado e autônomo (+3.5 a +5.0). Possui orçamento duodecimal próprio que o protege de qualquer recessão. O atrito na Mudança concentra-se em ataques aos ministros das cortes superiores (-4.5).",
         items: [
           {
             title: "1. Vitaliciedade e Estabilidade",
-            m: 1.0, r: 0.5,
+            m: 4.0, r: 5.0,
             descM: "Vitaliciedade de juízes e promotores é cláusula pétrea blindada contra qualquer PEC.",
-            descR: "Garantia constitucional absoluta e intocável.",
-            leg: "Art. 95, I e Art. 128, § 5º da CF."
+            descR: "Totalmente blindada e inquestionável em qualquer hipótese republicana.",
+            leg: "Art. 95, I e Art. 128 da CF."
           },
           {
             title: "2. Autonomia Financeira (Duodécimo)",
-            m: 1.5, r: 0.8,
-            descM: "Repasse orçamentário mensal até o dia 20 blindado contra contingenciamento do Executivo.",
-            descR: "Garantia plena do repasse constitucional sem atrasos.",
+            m: 3.0, r: 4.8,
+            descM: "Repasse obrigatório até o dia 20 de cada mês não pode ser contingenciado pelo Executivo.",
+            descR: "Garantia irrestrita do repasse constitucional dos duodécimos orçamentários.",
             leg: "Art. 168 da CF/88."
           },
           {
             title: "3. Reajustes e Verbas Indenizatórias",
-            m: 2.5, r: 1.5,
-            descM: "Pressão política pontual sobre licença compensatória e penduricalhos, quase sempre vencida pelo lobby.",
-            descR: "Autonomia plena para aprovação de reajustes e adicionais aprovados pelo CNJ/CNMP.",
+            m: -2.0, r: 3.5,
+            descM: "Pressão política pontual sobre licença compensatória e penduricalhos, neutralizada pelo lobby.",
+            descR: "Preservação da autonomia de reajustes e criação de verbas indenizatórias pelo CNJ/CNMP.",
             leg: "Art. 96 da CF."
           },
           {
             title: "4. Situação dos Técnicos e Analistas Judiciários",
-            m: 3.5, r: 1.8,
-            descM: "Tentativa de flexibilizar o quadro de apoio dos tribunais pela PEC 32.",
-            descR: "Plano de carreira dos servidores do Judiciário aprovado por lei própria e blindado.",
+            m: -3.0, r: 4.0,
+            descM: "Tentativa de enquadrar técnicos judiciários nas regras gerais da PEC 32.",
+            descR: "Plano de cargos e salários dos servidores do Judiciário aprovado por lei própria e blindado.",
             leg: "Lei nº 11.416/2006."
           },
           {
             title: "5. Pressão Política e Cassações no STF",
-            m: 4.8, r: 1.0,
-            descM: "Ponto crítico de atrito: governo de supermaioria usando o Senado para cassar ministros e impor decisões monocráticas limitadas.",
-            descR: "Relação institucional harmônica e defesa da independência da Suprema Corte.",
+            m: -4.5, r: 4.0,
+            descM: "Ponto crítico de atrito: governo de supermaioria usando o Senado para cassar ministros do STF e limitar decisões monocráticas.",
+            descR: "Relação institucional harmônica com os tribunais superiores e defesa da integridade da corte.",
             leg: "Art. 52, II da CF/88."
           },
           {
             title: "6. Concursos Públicos para Tribunais",
-            m: 1.8, r: 1.5,
-            descM: "Editais mantidos com recursos do próprio orçamento duodecimal do Judiciário.",
-            descR: "Concursos regulares mantidos sem dependência das decisões do Ministério da Fazenda.",
+            m: 1.5, r: 2.0,
+            descM: "Concursos mantidos autonomamente pelos Tribunais, com orçamento próprio protegido da crise.",
+            descR: "Concursos regulares mantidos sem dependência direta do Ministério da Fazenda.",
             leg: "Art. 96, I, c da CF."
           },
           {
             title: "7. Infraestrutura de Fóruns e Informática (PJe)",
-            m: 1.5, r: 1.2,
+            m: 2.5, r: 3.0,
             descM: "Orçamento de TI modernizado com taxas e custas judiciais próprias.",
-            descR: "Infraestrutura de ponta e sistemas informatizados mantidos com excelência.",
+            descR: "Infraestrutura de varas mantida com padrão de excelência financiada pelo duodécimo.",
             leg: "Autonomia orçamentária dos Tribunais."
           },
           {
             title: "8. Metas de Julgamento do CNJ",
-            m: 2.5, r: 2.2,
+            m: -1.0, r: 1.0,
             descM: "Cobrança de metas de produtividade mantida conforme diretrizes do CNJ.",
             descR: "Metas mantidas sob gestão consensual entre os tribunais.",
             leg: "Art. 103-B da CF."
           },
           {
-            title: "9. Previdência Própria dos Magistrados",
-            m: 2.8, r: 1.8,
-            descM: "Pressão para limitar regras de transição previdenciárias de juízes antigos.",
-            descR: "Manutenção do quadro previdenciário complementar estabelecido pela EC 103/2019.",
+            title: "9. Previdência Própria e Complementar (Jusprev)",
+            m: -2.0, r: 2.0,
+            descM: "Estrutura previdenciária já adaptada ao teto do RGPS com previdência complementar robusta operando.",
+            descR: "Manutenção do quadro atual sem novas reformas punitivas.",
             leg: "Art. 40, § 14 da CF."
           },
           {
             title: "10. Teletrabalho e Juízo Digital",
-            m: 2.0, r: 1.2,
+            m: 1.0, r: 3.5,
             descM: "Possível pressão para comparecimento presencial compulsório.",
-            descR: "Teletrabalho amplamente consolidado para assessores e servidores de gabinete.",
+            descR: "Ampla consolidação do teletrabalho para assessores com ganhos comprovados de produtividade.",
             leg: "Resoluções nº 227 e 345 do CNJ."
           },
           {
             title: "11. Risco de Impeachment de Desembargadores",
-            m: 4.2, r: 1.0,
+            m: -3.8, r: 3.5,
             descM: "Abertura de investigações políticas contra magistrados que proferirem decisões desfavoráveis ao governo.",
             descR: "Independência funcional plena das decisões judiciais garantida pela CF/88.",
             leg: "Art. 95, caput da CF."
           },
           {
             title: "12. Carga Processual e Acúmulo de Varas",
-            m: 3.5, r: 3.2,
-            descM: "Aumento de processos decorrente de reformas legais aceleradas.",
-            descR: "Judicialização em massa gerada pela crise econômica (insolvências e benefícios negados).",
+            m: -2.5, r: -2.0,
+            descM: "Aumento de processos decorrente de reformas legais aceleradas e contestações de atos normativos.",
+            descR: "Judicialização gerada pela crise econômica (insolvências e benefícios negados).",
             leg: "Estatísticas do Justiça em Números do CNJ."
           }
         ]
       }
     };
 
-    let activeSectorKey = "educacao_fed";
+    let activeSectorKey = "geral";
     let currentFilter = "all";
 
     function renderSectorNav() {
@@ -805,84 +899,115 @@
       const sec = database[activeSectorKey];
 
       document.getElementById("activeSectorBadge").textContent = `Visualizando: ${sec.name}`;
-      document.getElementById("chartSectorTitle").textContent = `Matriz Detalhada: ${sec.name}`;
+      document.getElementById("chartSectorTitle").textContent = `Matriz Bipolar Central: ${sec.name}`;
       document.getElementById("balanceSummary").textContent = sec.summary;
 
+      // Cálculos da Média Geral no eixo bipolar (-5 a +5)
       const totalItems = sec.items.length;
       const sumMudanca = sec.items.reduce((acc, cur) => acc + cur.m, 0);
       const sumReeleicao = sec.items.reduce((acc, cur) => acc + cur.r, 0);
 
-      const avgM = (sumMudanca / totalItems).toFixed(2);
-      const avgR = (sumReeleicao / totalItems).toFixed(2);
+      const avgM = (sumMudanca / totalItems);
+      const avgR = (sumReeleicao / totalItems);
 
-      document.getElementById("avgScoreMudanca").textContent = `${avgM} / 5.0`;
-      document.getElementById("avgScoreReeleicao").textContent = `${avgR} / 5.0`;
-      document.getElementById("footerAvgMudanca").textContent = `${avgM} / 5.0`;
-      document.getElementById("footerAvgReeleicao").textContent = `${avgR} / 5.0`;
+      const fmtM = (avgM > 0 ? "+" : "") + avgM.toFixed(2);
+      const fmtR = (avgR > 0 ? "+" : "") + avgR.toFixed(2);
 
+      document.getElementById("avgScoreMudanca").textContent = fmtM;
+      document.getElementById("avgScoreReeleicao").textContent = fmtR;
+      document.getElementById("footerAvgMudanca").textContent = fmtM;
+      document.getElementById("footerAvgReeleicao").textContent = fmtR;
+
+      // Diagnóstico comparativo
       const pill = document.getElementById("riskBalancePill");
       const heading = document.getElementById("balanceHeading");
 
-      if (avgM > avgR) {
+      if (avgR > avgM) {
         pill.className = "text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-700";
-        pill.textContent = "Maior Risco: Mudança";
-        heading.textContent = `Ameaça Normativa Preponderante (+${(avgM - avgR).toFixed(1)})`;
-      } else if (avgR > avgM) {
-        pill.className = "text-[10px] px-1.5 py-0.5 rounded bg-rose-950 text-rose-300 border border-rose-700";
-        pill.textContent = "Maior Risco: Reeleição";
-        heading.textContent = `Ameaça Fiscal Preponderante (+${(avgR - avgM).toFixed(1)})`;
+        pill.textContent = "Melhor Saldo: Reeleição";
+        heading.textContent = `Maior Preservação em Reeleição (${fmtR} vs ${fmtM})`;
+      } else if (avgM > avgR) {
+        pill.className = "text-[10px] px-1.5 py-0.5 rounded bg-indigo-950 text-indigo-300 border border-indigo-700";
+        pill.textContent = "Melhor Saldo: Mudança";
+        heading.textContent = `Maior Estabilidade em Mudança (${fmtM} vs ${fmtR})`;
       } else {
         pill.className = "text-[10px] px-1.5 py-0.5 rounded bg-slate-800 text-slate-300";
         pill.textContent = "Equilibrado";
-        heading.textContent = "Equilíbrio Exato de Vulnerabilidades";
+        heading.textContent = "Equilíbrio Exato de Impactos";
       }
 
+      // Renderiza as 12 linhas do gráfico BIPOLAR CENTRAL
       const container = document.getElementById('chart-rows');
       container.innerHTML = '';
 
-      sec.items.forEach((item) => {
+      sec.items.forEach(item => {
         const row = document.createElement('div');
-        row.className = 'group p-3 rounded-xl bg-slate-950/70 hover:bg-slate-800/60 border border-slate-800/80 transition cursor-pointer';
+        row.className = 'group p-3 rounded-xl bg-slate-950/60 hover:bg-slate-800/50 border border-slate-800/80 transition cursor-pointer';
         row.onclick = () => openModal(item, sec.name);
 
-        const widthM = (item.m / 5.0) * 100;
-        const widthR = (item.r / 5.0) * 100;
+        const mWidth = (Math.abs(item.m) / 5.0) * 100;
+        const rWidth = (Math.abs(item.r) / 5.0) * 100;
 
-        const showM = currentFilter === 'all' || currentFilter === 'mudanca';
-        const showR = currentFilter === 'all' || currentFilter === 'reeleicao';
+        const isMudancaLeft = item.m < 0;
+        const isReeleicaoLeft = item.r < 0;
+
+        const showMudanca = currentFilter === 'all' || currentFilter === 'mudanca';
+        const showReeleicao = currentFilter === 'all' || currentFilter === 'reeleicao';
 
         row.innerHTML = `
           <div class="flex items-center justify-between text-xs sm:text-sm font-bold text-slate-200 mb-2">
             <span class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 group-hover:scale-125 transition"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 group-hover:bg-emerald-400 transition"></span>
               ${item.title}
             </span>
-            <span class="text-[11px] font-normal text-slate-400 group-hover:text-indigo-300 flex items-center gap-1">
+            <span class="text-[11px] font-normal text-slate-400 group-hover:text-slate-300 flex items-center gap-1">
               Ver base legal
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </span>
           </div>
 
-          <div class="space-y-1.5 bg-slate-900/90 p-2 rounded-lg border border-slate-800/80">
-            ${showM ? `
-              <div class="flex items-center gap-2">
-                <span class="text-[10px] font-bold text-emerald-400 w-16 shrink-0">Mudança</span>
-                <div class="flex-1 bg-slate-950 rounded-full h-3 overflow-hidden border border-slate-800">
-                  <div class="h-full rounded-full bg-[#00843D] border-r-2 border-[#FFCC29] bar-anim" style="width: ${widthM}%"></div>
-                </div>
-                <span class="text-[10px] font-bold text-slate-300 w-8 text-right">${item.m.toFixed(1)}</span>
-              </div>
-            ` : ''}
+          <!-- Bipolar Grid: Col 1 (Negative -5 to 0) | Col 2 (Positive 0 to +5) -->
+          <div class="grid grid-cols-2 gap-0 relative h-16 sm:h-14 bg-slate-900/90 rounded-lg p-1.5 border border-slate-800/80 overflow-hidden">
+            <!-- Center dividing axis line -->
+            <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-slate-400/40 z-10 -translate-x-1/2 pointer-events-none"></div>
 
-            ${showR ? `
-              <div class="flex items-center gap-2">
-                <span class="text-[10px] font-bold text-rose-400 w-16 shrink-0">Reeleição</span>
-                <div class="flex-1 bg-slate-950 rounded-full h-3 overflow-hidden border border-slate-800">
-                  <div class="h-full rounded-full bg-[#C8102E] border-r-2 border-[#800000] bar-anim" style="width: ${widthR}%"></div>
+            <!-- LEFT HALF: Zona de Risco (-5 a 0) -->
+            <div class="flex flex-col justify-center gap-1.5 pr-1 relative">
+              <!-- Mudanca Bar (Left) -->
+              ${showMudanca && isMudancaLeft ? `
+                <div class="flex items-center justify-end w-full h-5">
+                  <span class="text-[10px] font-bold text-rose-300 mr-1.5">${item.m.toFixed(1)}</span>
+                  <div class="h-full rounded-l bg-[#00843D] border border-[#FFCC29] shadow-sm bar-anim" style="width: ${mWidth}%"></div>
                 </div>
-                <span class="text-[10px] font-bold text-slate-300 w-8 text-right">${item.r.toFixed(1)}</span>
-              </div>
-            ` : ''}
+              ` : '<div class="h-5"></div>'}
+
+              <!-- Reeleicao Bar (Left) -->
+              ${showReeleicao && isReeleicaoLeft ? `
+                <div class="flex items-center justify-end w-full h-5">
+                  <span class="text-[10px] font-bold text-rose-300 mr-1.5">${item.r.toFixed(1)}</span>
+                  <div class="h-full rounded-l bg-[#C8102E] border border-[#800000] shadow-sm bar-anim" style="width: ${rWidth}%"></div>
+                </div>
+              ` : '<div class="h-5"></div>'}
+            </div>
+
+            <!-- RIGHT HALF: Zona de Preservação (0 a +5) -->
+            <div class="flex flex-col justify-center gap-1.5 pl-1 relative">
+              <!-- Mudanca Bar (Right) -->
+              ${showMudanca && !isMudancaLeft ? `
+                <div class="flex items-center justify-start w-full h-5">
+                  <div class="h-full rounded-r bg-[#00843D] border border-[#FFCC29] shadow-sm bar-anim" style="width: ${mWidth}%"></div>
+                  <span class="text-[10px] font-bold text-emerald-300 ml-1.5">+${item.m.toFixed(1)}</span>
+                </div>
+              ` : '<div class="h-5"></div>'}
+
+              <!-- Reeleicao Bar (Right) -->
+              ${showReeleicao && !isReeleicaoLeft ? `
+                <div class="flex items-center justify-start w-full h-5">
+                  <div class="h-full rounded-r bg-[#C8102E] border border-[#800000] shadow-sm bar-anim" style="width: ${rWidth}%"></div>
+                  <span class="text-[10px] font-bold text-emerald-300 ml-1.5">+${item.r.toFixed(1)}</span>
+                </div>
+              ` : '<div class="h-5"></div>'}
+            </div>
           </div>
         `;
         container.appendChild(row);
@@ -905,9 +1030,9 @@
     function openModal(item, sectorName) {
       document.getElementById('modalSectorTag').textContent = sectorName;
       document.getElementById('modalTitle').textContent = item.title;
-      document.getElementById('modalNotaMudanca').textContent = item.m.toFixed(1);
+      document.getElementById('modalNotaMudanca').textContent = (item.m > 0 ? "+" : "") + item.m.toFixed(1);
       document.getElementById('modalDescMudanca').textContent = item.descM;
-      document.getElementById('modalNotaReeleicao').textContent = item.r.toFixed(1);
+      document.getElementById('modalNotaReeleicao').textContent = (item.r > 0 ? "+" : "") + item.r.toFixed(1);
       document.getElementById('modalDescReeleicao').textContent = item.descR;
       document.getElementById('modalFundamento').textContent = item.leg;
       document.getElementById('detailsModal').classList.remove('hidden');
@@ -923,7 +1048,7 @@
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = "matriz_estrategica_funcionalismo.html";
+      a.download = "matriz_bipolar_funcionalismo.html";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -937,6 +1062,7 @@
       }
     };
 
+    // Inicialização
     renderSectorNav();
     renderSectorData();
   </script>
